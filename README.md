@@ -70,22 +70,6 @@ The causal model routes everything through `=`. The non-causal model distributes
 
 ---
 
-## Repository structure
-
-<!-- TODO: replace with your actual layout -->
-
-```
-.
-├── src/                # model, training loop, config
-├── analysis/           # Fourier energy, probes, logit lens, patching
-├── notebooks/          # figures and exploration
-├── checkpoints/        # saved weights + cached forward passes (not tracked)
-├── figures/
-└── report.pdf
-```
-
-Checkpoints store full model weights plus a cached forward pass on 512 held-out examples, including residual stream activations at every layer and all attention matrices. Every analysis reads from these caches rather than re-running the model.
-
 ## Reproducing
 
 Check ['instructions.md](instructions.md)
